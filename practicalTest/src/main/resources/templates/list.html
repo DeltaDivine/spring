@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dish list</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Job History</th>
+        <th>Skill</th>
+    </tr>
+    <tr th:each="candidate : ${pagination.getContent()}">
+        <td th:text="${candidate.name}"></td>
+        <td th:text="${candidate.jobHistory}"></td>
+        <td th:text="${candidate.skill}"></td>
+    </tr>
+</table>
+</body>
+</html>
